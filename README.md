@@ -1,4 +1,5 @@
 Flask Authentication & Funds API
+
 A robust, modular Flask RESTful API featuring User Authentication (Signup/Login) and database persistence using SQLAlchemy. This project follows the Application Factory Pattern for scalability.
 
 🚀 Features
