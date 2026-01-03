@@ -1,37 +1,46 @@
+// ...existing code...
 # Flask Authentication & Funds API
 
-A robust, modular Flask RESTful API featuring User Authentication (Signup/Login) and database persistence using SQLAlchemy. This project follows the Application Factory Pattern for scalability.
+A modular Flask RESTful API with user signup/login, secure password hashing, and SQLAlchemy persistence. Built using the application factory pattern.
 
----
+## Features
+- Modular Blueprints for auth and core logic
+- Secure password hashing (werkzeug)
+- SQLAlchemy models for users and funds
+- Simple JSON REST endpoints for signup/login
 
-## 🚀 Features
-
-* **Modular Architecture:** Uses Blueprints to separate authentication from core logic.
-* **Secure Authentication:** Password hashing using werkzeug.security.
-* **Database Integration:** SQLite/SQLAlchemy with User and Funds models.
-* **Input Validation:** Checks for required fields and existing user records.
-
-## 🛠️ Installation & Usage
-
-1. Clone the repository:
-   
+## Quickstart
+1. Clone the repo:
    git clone <your-repo-url>
-   
    cd my_project
-   
-2. Create a Virtual Environment:
-   
+2. Create and activate a virtualenv:
    python -m venv venv
-   
-   source venv/bin/activate 
-
-4. Install the Dependencies:
-   
-   pip install flask flask-sqlalchemy PyJWT
-
-5. Run the Application:
-   
+   source venv/bin/activate
+3. Install dependencies:
+   pip install flask flask-sqlalchemy PyJWT werkzeug pymysql
+4. Configure database in [`Config`](config.py)
+5. Run the app:
    python run.py
 
+## Configuration
+Edit the database URI in [`Config`](config.py).
 
-*Made by [Manav](https://github.com/manav2001-coder)*
+## Key files & symbols
+- App factory: [`create_app`](app/__init__.py) — [app/__init__.py](app/__init__.py)  
+- Entry point: [run.py](run.py)  
+- Auth blueprint: [`auth`](app/auth.py) — [app/auth.py](app/auth.py)  
+- DB instance: [`db`](app/db.py) — [app/db.py](app/db.py)  
+- Models: [`User`](app/models/__init__.py), [`Funds`](app/models/__init__.py) — [app/models/__init__.py](app/models/__init__.py)  
+- Config class: [`Config`](config.py) — [config.py](config.py)
+
+## API (examples)
+- POST /signup/ — JSON { firstName, lastName, email, password } (creates a user)
+- POST /login/ — JSON { email, password } (returns success/failed)
+
+## Development
+- App initializes DB via `db.create_all()` inside [`create_app`](app/__init__.py).
+- Run with debug during development: python run.py
+
+## Notes
+- Ensure your DB URI in [`Config`](config.py) points to a reachable database.
+- Add tests and environment-based config for production readiness.
