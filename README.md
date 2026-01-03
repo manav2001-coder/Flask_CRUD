@@ -1,4 +1,3 @@
-// ...existing code...
 # Flask Authentication & Funds API
 
 A modular Flask RESTful API with user signup/login, secure password hashing, and SQLAlchemy persistence. Built using the application factory pattern.
