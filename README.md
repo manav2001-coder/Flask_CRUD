@@ -10,15 +10,6 @@ Database Integration: SQLite/SQLAlchemy with User and Funds models.
 
 Input Validation: Checks for required fields and existing user records.
 
-📂 Project Structure
-/my_project
-├── app/
-│   ├── __init__.py      # Application Factory
-│   ├── auth.py          # Authentication Blueprint (Routes)
-│   ├── models.py        # SQLAlchemy Models (User, Funds)
-│   └── db.py            # Database instance initialization
-├── config.py            # Configuration settings
-└── run.py               # Application entry point
 
 🛠️ Installation & Setup
 1. Clone the repository:
@@ -27,7 +18,7 @@ Input Validation: Checks for required fields and existing user records.
    
 2. Create a Virtual Environment:
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate 
 
 3. Install the Dependencies:
    pip install flask flask-sqlalchemy PyJWT
