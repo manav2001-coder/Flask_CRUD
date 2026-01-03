@@ -18,18 +18,20 @@ Input Validation: Checks for required fields and existing user records.
 1. Clone the repository:
    
    git clone <your-repo-url>
+   
    cd my_project
    
 2. Create a Virtual Environment:
    
    python -m venv venv
+   
    source venv/bin/activate 
 
-3. Install the Dependencies:
+4. Install the Dependencies:
    
    pip install flask flask-sqlalchemy PyJWT
 
-4. Run the Application:
+5. Run the Application:
    
    python run.py
 
