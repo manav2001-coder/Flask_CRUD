@@ -1,17 +1,19 @@
-# Flask Authentication & Funds API
+Flask Authentication & Funds API
 
 A robust, modular Flask RESTful API featuring User Authentication (Signup/Login) and database persistence using SQLAlchemy. This project follows the Application Factory Pattern for scalability.
 
----
+🚀 Features
 
-## 🚀 Features
+Modular Architecture: Uses Blueprints to separate authentication from core logic.
 
-* **Modular Architecture:** Uses Blueprints to separate authentication from core logic.
-* **Secure Authentication:** Password hashing using werkzeug.security.
-* **Database Integration:** SQLite/SQLAlchemy with User and Funds models.
-* **Input Validation:** Checks for required fields and existing user records.
+Secure Authentication: Password hashing using werkzeug.security.
 
-## 🛠️ Installation & Usage
+Database Integration: SQLite/SQLAlchemy with User and Funds models.
+
+Input Validation: Checks for required fields and existing user records.
+
+
+🛠️ Installation & Setup
 
 1. Clone the repository:
    
@@ -34,4 +36,3 @@ A robust, modular Flask RESTful API featuring User Authentication (Signup/Login)
    python run.py
 
 
-*Made by [Manav](https://github.com/manav2001-coder)*
